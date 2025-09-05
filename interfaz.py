@@ -2,25 +2,26 @@ import tkinter as tk
 
 ventana = tk.Tk()
 ventana.title("CALCULADORA")
-ventana.geometry("800x500")
+ventana.geometry("800x510")
 ventana.configure(bg= "beige")
 
-etiqueta = tk.Label(ventana, text="CALCULADORA", font=("Arial", 55, "bold"), fg="dark blue", bg= "beige")
+
+etiqueta = tk.Label(ventana, text="CALCULADORA", font=("georgia", 55, "underline"), fg="goldenrod", bg= "beige")
 etiqueta.pack(pady=5)
 
-etiqueta = tk.Label(ventana, text="Ingresa el primer número:", font=("georgia", 12, "italic"), fg="purple", bg= "beige")
+etiqueta = tk.Label(ventana, text="Ingresa el primer número:", font=("georgia", 13, "italic"), fg="dark slate gray", bg= "beige")
 etiqueta.pack(pady=5)
 
-entrada1 = tk.Entry(ventana)
+entrada1 = tk.Entry(ventana, bg= "seashell")
 entrada1.pack(pady=5)
 
-etiqueta = tk.Label(ventana, text="Ingresa el segundo número:", font=("georgia", 12, "italic"), fg="purple", bg= "beige")
+etiqueta = tk.Label(ventana, text="Ingresa el segundo número:", font=("georgia", 13, "italic"), fg="dark slate gray", bg= "beige")
 etiqueta.pack(pady=5)
 
-entrada2 = tk.Entry(ventana)
+entrada2 = tk.Entry(ventana, bg= "seashell")
 entrada2.pack(pady=5)
 
-resultado = tk.Label(ventana, text="Resultado:", font=("georgia", 13, "underline"), fg="red", bg= "beige" )
+resultado = tk.Label(ventana, text="Resultado:", font=("georgia", 15, "italic"), fg="firebrick", bg= "beige" )
 resultado.pack(pady=5)
 
 def sumar():
@@ -55,19 +56,19 @@ def limpiar():
     entrada2.delete(0, tk.END)
     resultado.config(text="Resultado:")
 
-boton_sumar = tk.Button(ventana, text="SUMAR", command=sumar, activeforeground="Yellow", activebackground="Red", bd ="5", bg = "gray")
+boton_sumar = tk.Button(ventana, text="SUMAR", command=sumar, bd ="7", bg = "cadet blue", fg = "white",font=("Arial", 9, "bold"))
 boton_sumar.pack(pady=5)
 
-boton_restar = tk.Button(ventana, text="RESTAR", command=restar, bd ="5", bg = "gray")
+boton_restar = tk.Button(ventana, text="RESTAR", command=restar, bd ="7", bg = "cadet blue", fg = "white", font=("Arial", 9, "bold"))
 boton_restar.pack(pady=5)
 
-boton_multiplicar = tk.Button(ventana, text="MULTIPLICAR", command=multiplicar, bd ="5", bg = "gray")
+boton_multiplicar = tk.Button(ventana, text="MULTIPLICAR", command=multiplicar, bd ="7", bg = "cadet blue", fg = "white", font=("Arial", 9, "bold"))
 boton_multiplicar.pack(pady=5)
 
-botono_limpiar = tk.Button(ventana, text="LIMPIAR", command=limpiar, bd ="5", bg = "gray")
+botono_limpiar = tk.Button(ventana, text="LIMPIAR", command=limpiar, bd ="7", bg = "cadet blue", fg = "white", font=("Arial", 9, "bold"))
 botono_limpiar.pack(pady=5)
 
-boton_salir = tk.Button(ventana, text="SALIR", command=ventana.quit, bd ="5", bg = "gray")
+boton_salir = tk.Button(ventana, text="SALIR", command=ventana.quit, bd ="7", bg = "cadet blue", fg= "white", font=("Arial", 9, "bold"))
 boton_salir.pack(pady=5)
 
 ventana.mainloop()
